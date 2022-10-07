@@ -1,0 +1,16 @@
+{:paths ["src" "resources" "target/classes"]
+ :deps {babashka/fs {:mvn/version "0.1.6"}
+        babashka/process {:mvn/version "0.1.2"}
+        com.stuartsierra/component {:mvn/version "1.1.0"}
+        lambdaisland/fetch {:mvn/version "1.0.41"}
+        lambdaisland/regal {:mvn/version "0.0.143"}
+        lilactown/helix {:mvn/version "0.1.7"}
+        metosin/reitit {:mvn/version "0.5.18"}
+        org.clojure/clojurescript {:mvn/version "1.11.60"}
+        ring/ring-jetty-adapter {:mvn/version "1.9.5"}
+        ring-middleware-format/ring-middleware-format {:mvn/version "0.7.5"}}
+ :aliases {:build {:extra-paths ["dev"]
+                   :extra-deps {io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}
+                                org.clojure/tools.namespace {:mvn/version "1.3.0"}
+                                thheller/shadow-cljs {:mvn/version "2.20.2"}}}
+           :run {:exec-fn inferenceql.auto-modeling.webapp/run}}}

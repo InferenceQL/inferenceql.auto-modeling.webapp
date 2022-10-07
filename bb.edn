@@ -1,0 +1,15 @@
+{:tasks {bundle:none {:task (shell "pnpm rollup --config rollup.config.js -m")}
+
+         bundle:default {:task (shell "pnpm rollup --config rollup.config.js -m")}
+
+         bundle {:depends [bundle:default]}
+
+         build {:task (shell "clj -M -m cljs.main -co build.edn -v -c")}
+
+         clean {:task (shell "rm -Rf resources/js")}
+
+         watch:cljs {:task (shell "clj -M -m cljs.main -co build.edn -v -w src -c")}
+
+         watch:js {:task (shell "pnpm rollup --config rollup.config.js --sourcemap --watch")}
+
+         repl:cljs {:task (shell "clj -M -m cljs.main -co build.edn -v -c -r")}}}
