@@ -10,6 +10,7 @@
         ring/ring-jetty-adapter {:mvn/version "1.9.5"}
         ring-middleware-format/ring-middleware-format {:mvn/version "0.7.5"}}
  :aliases {:build {:extra-paths ["dev"]
-                   :extra-deps {org.clojure/tools.namespace {:mvn/version "1.3.0"}
-                                io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}}}
+                   :extra-deps {io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}
+                                org.clojure/tools.namespace {:mvn/version "1.3.0"}
+                                thheller/shadow-cljs {:mvn/version "2.20.2"}}}
            :run {:exec-fn inferenceql.auto-modeling.webapp/run}}}
