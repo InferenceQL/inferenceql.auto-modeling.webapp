@@ -1,0 +1,6 @@
+{:main inferenceql.auto-modeling.webapp.client
+ :output-to "resources/js/index.js"
+ :output-dir "resources/js"
+ :asset-path "js"
+ :target :bundle
+ :closure-defines {cljs.core/*global* "window"}} ; needed for advanced
